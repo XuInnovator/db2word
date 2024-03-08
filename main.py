@@ -95,6 +95,8 @@ if __name__ == '__main__':
     index = 1
     for table_name in table_name_list:
         print(table_name[1])
-        print(filed_comment(table_name[0]))
-        create_doc(index, doc, table_name[0], table_name[1], filed_comment(table_name[0]))
+        filed_list = filed_comment(table_name[0])
+        print(filed_list)
+        # create_doc(index, doc, table_name[0], table_name[1], filed_comment(table_name[0]))
+        create_doc(index, doc, table_name[0], table_name[1], filed_list)
         index += 1
